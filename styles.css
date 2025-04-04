@@ -14,11 +14,11 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 25% 75%;
     grid-template-areas:
         "sidebar header"
         "sidebar content";
-    gap: 2px 0px;
+    gap: 2px 2px;;
     /* Sidebar takes 1/5th of the width, main content takes 4/5ths */
     /* Header takes 1/5th of the height, main content takes 4/5ths */
     background-color: darkslategrey;
@@ -32,7 +32,7 @@ body {
     background-color: darkslategray;
     display: grid;
     grid-template-columns: 1fr 1fr repeat(3, 1fr); 
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
     gap: 5px 5px;}
 
 /* Header items */
@@ -148,10 +148,62 @@ body {
 /* Sidebar area */
 
 .sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 25%);
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-    background-color: slategray;
     height: 100%;
+    gap: 2px;
+
+}
+
+.sidebar .dashboard-logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: darkslategray;
+    font-size: 0.7em;
+    font-weight: 600;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    
+}
+
+.sidebar .dashboard-logo img {
+    width: clamp(60px, 80px, 100px);
+    height: clamp(60px, 80px, 100px);
+    border-radius: 25%;
+}
+
+.sidebar .lists {
+    grid-row: 2 / span 3;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}
+
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: whitesmoke;
+}
+
+.sidebar ul li:hover {
+    background-color: slategrey;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .main-content {
