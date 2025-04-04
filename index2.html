@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnonyMouse's Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Create header section -->
+        <div class="header">
+            <!-- Add search form-->
+            <form id="search-form" action="search.php" method="get">
+                <input type="text" id="search" name="search" placeholder="Search">
+                <button type="submit">Search</button>
+            </form>
+            <!-- Add notification icon-->
+            <div class="alert-icon">
+                <img src="./img/notification.png" alt="Notification Icon">
+            </div>
+                <!-- Icon source: "https://www.flaticon.com/free-icons/notification" Notification icons created by Bartama Graphic -->
+            
+            <!-- Display user logo and userID-->
+            <div class="user-logo">
+                <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
+            </div>
+            <div class="user-id">
+                <h4>Anony Mouse</h4>
+                <p>@anonyMouse</p>
+            </div>
+
+            <!-- Add greeting message -->
+
+            <div class="greeting">
+                <div id="userImage">
+                    <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
+                </div>
+                <h2>Welcome to your Dashboard, Anony Mouse! (@anonyMouse)</h1>
+            </div>
+            <!-- Create buttons for new, review and share -->
+        </div>
+        <!-- Create sidebar -->
+        <div class="sidebar"></div>
+        <!-- Create main-content section-->
+        <div class="main-content"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* This is a CSS file that defines the layout and styles for a web page using CSS Grid. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar content";
+    gap: 2px 0px;
+    /* Sidebar takes 1/5th of the width, main content takes 4/5ths */
+    /* Header takes 1/5th of the height, main content takes 4/5ths */
+    background-color: darkslategrey;}
+
+/* Header area  */    
+.header {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    background-color: darkslategray;
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr); 
+    grid-template-rows: 1fr 2fr;
+}
+/* Header items */
+.header form {
+    margin-top: 10px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align vertically to center */
+}
+
+/* Search bar */
+.header input[type="text"] {
+    width: 75%;
+    padding: 1%;
+    border: 0.5px solid #ccc;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.header button[type="submit"] {
+    visibility: hidden;
+}
+
+/* Alert icon */
+.header .alert-icon {
+    margin-top: 10px;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: end;
+    align-items: center; /* Align vertically to center */
+}
+
+.header .alert-icon img {
+    width: 15%;
+    height: auto;
+    filter: invert(100%);
+}
+
+/* Greeting text */
+
+.header .greeting {
+    margin-top: 10px;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    align-items: end; /* Align vertically to center */
+    gap: 20px;
+    padding: 8%;
+    color: whitesmoke;
+}
+
+.header .greeting h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+.header .greeting p {
+    margin: 0;
+    font-size: 0.8em;
+    color: whitesmoke;
+}
+
+.header .greeting img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 30%;
+    border: 1px solid whitesmoke;
+}
+
+/* Profile icon */
+
+.header .user-logo {
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row;
+    justify-content: right;
+    align-items: center;
+}
+.header .user-logo img {
+    margin-top: 10px;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    border-radius: 50%;
+    height: auto;
+    max-width: 40%;
+}
+
+/* User ID */
+.header .user-id h4,p{
+    margin-top: 20px;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+    padding: 0 10px;
+    color: whitesmoke;
+}
+
+
+
+
+/* Sidebar area */
+
+.sidebar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    background-color: lightblue;
+    height: 100%;
+}
+
+.main-content {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    background-color: whitesmoke;
+}
