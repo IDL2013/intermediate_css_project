@@ -3,116 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AnonyMouse's Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-    <div class="header">
-        <div id="searchForm">
-            <form action="search.php" method="get">
+        <!-- Create header section -->
+        <div class="header">
+            <!-- Add search form-->
+            <form id="search-form" action="search.php" method="get">
                 <input type="text" id="search" name="search" placeholder="Search">
                 <button type="submit">Search</button>
             </form>
-        </div>
-        <div id="user">
-        <div id="userImage">
-            <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
-        </div>
-        <div id="username">Anony Mouse</div>
-        </div>
-        <div class="greeting">
-            <div id="userImage">
-                <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
+            <!-- Add notification icon-->
+            <div class="alert-icon">
+                <img src="./img/notification.png" alt="Notification Icon">
             </div>
-            <h2>Welcome to the Dashboard, Anony Mouse! (@anonyMouse)</h1>
-        </div>
-        <div id="button_list">
-            <button id="create">Create</button>
-            <button id="review">Upload</button>
-            <button id="share">Share</button>
-        </div>
-    </div>
-    <div class="sidebar">
-        <ul class="sidebar-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Tasks</a></li>
-            <li><a href="#">Communities</a></li>
-        </ul>
+                <!-- Icon source: "https://www.flaticon.com/free-icons/notification" Notification icons created by Bartama Graphic -->
+            
+            <!-- Display user logo and userID-->
+            <div class="user">
+                <div class="user-logo">
+                    <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
+                </div>
+                <div class="user-id">
+                    <h4>Anony Mouse</h4>
+                    <p>@anonyMouse</p>
+                </div>
+            </div>
 
-        <ul class="sidebar-list">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Privacy</a></li>
-            </ul>
-        <footer>© Iain Leslie 2025</footer>
-    </div>
-    <div class="dashboard">
-        <div class="project_cards">
-            <h3>Your projects</h3>
-            <div class="card">
-                <h4>Spotlight project</h4>
-                <p>This is the best I can do</p>
-                <p>Last updated: 2025-01-01</p>
-                <p>Created by: Anony Mouse</p>
-                <p>Tags: #fun, #project</p>
+            <!-- Add greeting message -->
+
+            <div class="greeting">
+                <div id="userImage">
+                    <img src="https://cdn.vectorstock.com/i/500p/46/58/cute-rat-cartoon-holding-cheese-vector-47954658.jpg" alt="User Image of mouse eating cheese">
+                </div>
+                <h2>Welcome to your Dashboard, Anony Mouse!</h1>
             </div>
-            <div class="card">
-                <h4>Tester</h4>
-                <p>Just playing around</p>
-                <p>Last updated: 2025-04-30</p>
-                <p>Created by: another User</p>
-                <p>Tags: #training</p>
-            </div>
-            <div class="card">
-                <h4>Heritage example</h4>
-                <p>Archived example</p>
-                <p>Last updated: 2023-04-01</p>
-                <p>Created by: another User</p>
-                <p>Tags: #archived</p>
-            </div>
-            <div class="card">
-                <h4>Spotlight project</h4>
-                <p>This is the best I can do</p>
-                <p>Last updated: 2025-01-01</p>
-                <p>Created by: Anony Mouse</p>
-                <p>Tags: #fun, #project</p>
-            </div>
-            <div class="card">
-                <h4>Tester</h4>
-                <p>Just playing around</p>
-                <p>Last updated: 2025-04-30</p>
-                <p>Created by: another User</p>
-                <p>Tags: #training</p>
-            </div>
-            <div class="card">
-                <h4>Heritage example</h4>
-                <p>Archived example</p>
-                <p>Last updated: 2023-04-01</p>
-                <p>Created by: another User</p>
-                <p>Tags: #archived</p>
+            <!-- Create buttons for new, review and share -->
+             <div class="button-list">
+                <button id="create">Create</button>
+                <button id="review">Review</button>
+                <button id="share">Share</button>
             </div>
         </div>
-        <div class="announcements">
-            <h3>Announcements</h3>
-            <ul id="announcements">
-                <li><h5>Site maintenance</h5><p>Note that the site will be down from tomorrow 10pm to Tuesday 8am. Take the weekend off!</p></li>
-                <li><h5>New features</h5><p>Please to share that we've integrated the new feature into the core workflow.</p></li>
-                <li><h5>Privacy policy</h5><p>We don't store your data. End of.</p></li>
-            </ul>
+        <!-- Create sidebar -->
+        <div class="sidebar">
+            <div class="dashboard-logo">
+                <img src="./img/logo.png" alt="Dashing dashboards logo">
+                <h1>Dashing Dashboards</h1>
+            </div>
+            <div class="lists">
+                
+                <ul class="sidebar-options">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Communities</a></li>
+                </ul>
+                <ul class="sidebar-tech">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+
+            
         </div>
-        <div class="trending">
-            <h3>Trending</h3>
-            <ul id="trending">
-                <li><h5>ASCO 2025 abstracts</h5><p>Uploaded: 2025-06-06</p></li>
-                <li><h5>New evidence</h5><p>Uploaded: 2025-04-30</p></li>
-                <li><h5>Successful Phase III readout!</h5><p>Last updated: 2023-04-01</p></li>
-            </ul>
-        <div class="trending"></div>
+        <!-- Create main-content section-->
+        <div class="main-content">
+            <div class="projects">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3</h3>
+                        <p>Description of project 3.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 4</h3>
+                        <p>Description of project 4.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 5</h3>
+                        <p>Description of project 5.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 6</h3>
+                        <p>Description of project 6.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="announcements">
+                <div class="announcement-list">
+                    <h3>Announcements</h3>
+                    <div class="announcement-item">
+                        <h4>Announcement 1</h4>
+                        <p>Description of announcement 1.</p>
+                    </div>
+                    <div class="announcement-item">
+                        <h4>Announcement 2</h4>
+                        <p>Description of announcement 2.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="task-list">
+                    <h3>Tasks</h3>
+                    <div class="task-item">
+                        <h4>Task 1</h4>
+                        <p>Description of task 1.</p>
+                    </div>
+                    <div class="task-item">
+                        <h4>Task 2</h4>
+                        <p>Description of task 2.</p>
+                    </div>
+                    <div class="task-item">
+                        <h4>Task 3</h4>
+                        <p>Description of task 3.</p>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        
     </div>
-    </div>
+    
 </body>
 </html>
